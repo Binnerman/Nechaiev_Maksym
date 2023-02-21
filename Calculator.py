@@ -1,3 +1,8 @@
+first = 0
+second = 0
+act = 0
+result = " "
+
 try:
     first = float(input('Введіть перше число:'))
 except ValueError:
@@ -7,7 +12,7 @@ except ValueError:
             print('Я так рахувати не вмію!')
             quit()
 
-act = input('Вкажіть математичну дію на вибір: "+" "-" "*" "/" "^"\n Ваш вибір:')
+act = input('Вкажіть математичну дію на вибір: "+" "-" "*" "/" "^"\nВаш вибір:')
 
 try:
     second = float(input('Введіть друге число:'))
@@ -18,21 +23,21 @@ except ValueError:
             print('Я так рахувати не вмію!')
             quit()
 
-if act == '+':
-    result = first + second
-elif act == '-':
-    result = first - second
-elif act == '*':
-    result = first * second
-elif act == '/':
-    result = first / second
-elif act == "^":
-    result = first ** second
-else:
-    pass
-
 try:
-    print(result)
-except NameError:
-    print("Неправильно обрана дія")
-    quit()
+    if act == '+':
+        result = first + second
+    elif act == '-':\
+        result = first - second
+    elif act == '*':\
+        result = first * second
+    elif act == '/':\
+        result = first / second
+    elif act == "^":\
+        result = first ** second
+    else:
+        print("Неправильно обрана дія")
+except ArithmeticError:
+    print("На нуль ділити не можна - всесвіт сколлапсується!")
+
+print(result)
+

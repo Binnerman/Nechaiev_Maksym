@@ -14,6 +14,9 @@ while again == "Так":
             print('Я так рахувати не вмію!')
             quit()
     act = input('Вкажіть математичну дію на вибір: "+" "-" "*" "/" "^"\nВаш вибір:')
+    if act != '+' or '-' or '*' or '/':
+        print('введи тільки пропоновану дію')
+
     try:
         second = float(input('Введіть друге число:'))
     except ValueError:
@@ -41,3 +44,5 @@ while again == "Так":
 
     print(result)
     again = input("Якщо бажаєте продовжити напишіть 'Так':")
+
+

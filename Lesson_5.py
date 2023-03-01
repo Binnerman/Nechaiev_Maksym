@@ -27,18 +27,18 @@ my_str = str(input("Введіть щось:"))
 # 3. Користувач вводить окремо рядок `s` та один символ `ch`. Необхідно здійснити пошук у рядку `s` всіх символів `ch`.
 # Для вирішення можна використовувати тільки функцію `find` (rfind), оператори `if` та `for` (while).
 
-# s = my_str
-# ch = input("Що знайти? ")
-# length = len(s)
-# start = 0
-#
-# while start < length:
-#     search = s.find(ch, start)
-#     print(ch, search)
-#     if search is not False:
-#         start = int(search) + 1
-#     else:
-#         break
+s = my_str
+ch = input("Який символ знайти? ")
+start = -1
+count = 0
+
+while True:
+    start = my_str.find(ch, start+1)
+    if start == -1:
+        break
+    count += 1
+
+print("У рядку ", count, "символів ", ch)
 
 # 11. Дано рядок. Замініть у цьому рядку всі появи літери `h` на літеру `H`, крім першого та останнього входження.
 #

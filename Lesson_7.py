@@ -63,9 +63,9 @@
 #     3,
 #     4,
 # ]
-# x = my_list.pop(1)
+# x = my_list.pop(0)
 # new_list = my_list
-# my_list.insert(0, x)
+# my_list.insert(-1, x)
 # print(new_list)
 
 
@@ -92,11 +92,53 @@
 # Для цього прикладу відповідь - 133. (використовуйте split та перевірку isdigit)
 
 
-
 # my_str = "43 більше ніж 34, але менше ніж 56."
 # result = 0
+# num_list = []
+# num = ''
 #
-# my_list = my_str.split(",")
+# my_list = my_str.split(" ")
+# print(my_list)
+# for word in my_list:
+#     # print(word)
+#     for symb in word:
+#         print(symb)
+#         if symb.isdigit():
+#             num = num + symb
+#             print(num)
+#         else:
+#             if num != '':
+#                 num_list.append(int(num))
+#                 num = ''
+#         if num != '':
+#             num_list.append(int(num))
+#
+#
+# print(num_list)
+
+
+my_str = "43 більше ніж a34faf, але менше ніж 56."
+num_list = []
+result = 0
+num = ''
+for char in my_str:
+    if char.isdigit():
+        num = num + char
+    else:
+        if num != '':
+            num_list.append(int(num))
+            num = ''
+if num != '':
+    num_list.append(int(num))
+
+print(num_list)
+
+for n in num_list:
+    result += n
+
+print(result)
+
+# my_list = my_str.split(", ")
 # # print(my_list)
 # my_str1 = " ".join(my_list)
 # # print(my_str1)
@@ -107,7 +149,7 @@
 # # print(my_str2)
 #
 # my_list = my_str2.split(" ")
-# # print(my_list)
+# print(my_list)
 # ln = len(my_list)
 # # print(ln)
 #
@@ -212,7 +254,7 @@
 # my_str_2 = input("Give me something second: ")
 # my_set_1 = set(my_str_1)
 # my_set_2 = set(my_str_2)
-# my_set = my_set_1.union(my_set_2)
+# my_set = my_set_1.intersection(my_set_2)
 # my_list = list(my_set)
 # print(my_list)
 

@@ -117,26 +117,26 @@
 # print(num_list)
 
 
-my_str = "43 більше ніж a34faf, але менше ніж 56."
-num_list = []
-result = 0
-num = ''
-for char in my_str:
-    if char.isdigit():
-        num = num + char
-    else:
-        if num != '':
-            num_list.append(int(num))
-            num = ''
-if num != '':
-    num_list.append(int(num))
-
-print(num_list)
-
-for n in num_list:
-    result += n
-
-print(result)
+# my_str = "43 більше ніж a34faf, але менше ніж 56."
+# num_list = []
+# result = 0
+# num = ''
+# for char in my_str:
+#     if char.isdigit():
+#         num = num + char
+#     else:
+#         if num != '':
+#             num_list.append(int(num))
+#             num = ''
+# if num != '':
+#     num_list.append(int(num))
+#
+# print(num_list)
+#
+# for n in num_list:
+#     result += n
+#
+# print(result)
 
 # my_list = my_str.split(", ")
 # # print(my_list)

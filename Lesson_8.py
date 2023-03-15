@@ -205,13 +205,13 @@ my_dict_2 = {
 # якщо ключ є у двох словниках - помістити пару {ключ: [значення_з_першого_словника, значення_з_другого_словника]},
 # {1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
 
-new_dict = my_dict_1.copy()
-for key, val in my_dict_2.items():
-    if new_dict.get(key):
-        new_dict[key] = [new_dict[key], val]
-    else:
-        new_dict[key] = val
-print(new_dict)
+# new_dict = my_dict_1.copy()
+# for key, val in my_dict_2.items():
+#     if new_dict.get(key):
+#         new_dict[key] = [new_dict[key], val]
+#     else:
+#         new_dict[key] = val
+# print(new_dict)
 
 
 

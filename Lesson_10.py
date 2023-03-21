@@ -99,7 +99,6 @@ names = "names.txt"
 #                 else:
 #                     fdate = datetime.strptime(date, "%B/%Y")
 #                     f2date = fdate.strftime("%m/%Y")
-#                 print(f2date)
 #                 y = {"date_original": x[0], "date_modified": f2date, }
 #                 my_list.append(y)
 #

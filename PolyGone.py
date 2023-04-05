@@ -1,36 +1,52 @@
-
-# value_list = ["d", "h", "d", "r"]
-# value_list = [1, 23, 4, 5, 6]
-# print(value_list)
-# value_set = set(value_list)
-# print(value_set)
-# value_set = set()
-# val_set_1 = {1, 2, 3}
-# val_set_2 = {11, 2, 31, 3}
+# Валютний трейдер USD-UAH
+# Складність 4/4
 #
-# result = val_set_2.difference(val_set_1) # мінусує всі уікальні ПОРЯДОК ВАЖЛИВИЙ
-# print(result)
+# Реалізувати функціонал обміну USD та UAH валют за допомогою CLI Python.
 #
-# result = val_set_1.intersection(val_set_2) # виводить лише спільні значення
-# print(result)
+# User Story:
+# Початкові умови (можна винести у config.json):
+#      курс: 36.00
+#      на гривневому рахунку: 10000.00 UAH
+#      на доларовому рахунку: 0.00 USD
+#      дельта: 0.5
+#
+# Правила зміни курсу долара:
+#      випадковим чином у діапазоні:
+#      price - delta <new_price <price + delta (у прикладі від 35.50 до 36.50)
+#
+# Всі розрахунки ведемо з точністю 2 знаки після коми!
+#
+# Аргументи запуску файлу:
+#      RATE – отримання поточного курсу (USD/UAH)
+#      AVAILABLE - отримання залишків за рахунками
+#      BUY XXX - покупка xxx доларів. За відсутності гирвень для покупки виводить повідомлення типу UNAVAILABLE, REQUIRED BALANCE UAH 2593.00, AVAILABLE 1000.00
+#      SELL XXX - продаж доларів. У разі відсутності доларів для продажу виводить повідомлення типу UNAVAILABLE, REQUIRED BALANCE USD 200.00, AVAILABLE 135.00
+#      BUY ALL – купівля доларів на всі можливі гривні.
+#      SELL ALL - продаж всіх доларів.
+#      NEXT – отримати наступний курс
+#      RESTART - розпочати гру з початку (з початковими умовами)
+#
+# Tech Requirements:
+# Мінімум три файли: 1) trader.py, 2) config.json 3) Стан системи (можна з історією дій) – свою назву
+# Стан системи (курс і доступний баланс кожної валюти) зчитується і зберігається у окремому файлі (формат файлу не розсуд розробника).
+# config.json
+#      Поля:
+#          "delta": 0.5
+#
+#
+# Приклад використання:
+# >>>python trader.py NEXT
+# >>>python trader.py RATE
+# 26.27
+# >>>python trader.py NEXT
+# >>>python trader.py NEXT
+# >>>python trader.py NEXT
+# >>>python trader.py RATE
+# 25.93
+# >>>python trader.py BUY 100
+# >>>python trader.py AVAILABLE
+# USD 100.0 UAH 7407.0
 
-
-res = False
-
-if len(text.replace(" ", "")) == 0:
-    res = True
-else:
-    if text[0].isdecimal():
-        res = True
-        if text.replace(" ", "").isdecimal():
-            res = True
-    if text.isalpha():
-        if text.isupper():
-            res = True
-        if text.islower():
-            res = False
-        else:
-            res = False
 
 
 

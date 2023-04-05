@@ -1,0 +1,6 @@
+{
+  "rate": 36.00,
+  "balance_uah": 1000.00,
+  "balance_usd": 0.00,
+  "delta": 0.5
+}
